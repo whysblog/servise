@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>服务维护中</title>
+  <style>
+    :root {
+      --bg-1: #0f172a;
+      --bg-2: #1e293b;
+      --card: rgba(255, 255, 255, 0.1);
+      --text: #e2e8f0;
+      --muted: #cbd5e1;
+      --accent: #38bdf8;
+      --accent-2: #22d3ee;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at 20% 20%, #1d4ed8 0%, transparent 45%),
+                  radial-gradient(circle at 80% 10%, #0891b2 0%, transparent 40%),
+                  linear-gradient(160deg, var(--bg-1), var(--bg-2));
+      color: var(--text);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .panel {
+      width: min(860px, 100%);
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 20px 55px rgba(0, 0, 0, 0.35);
+      overflow: hidden;
+    }
+
+    .top {
+      height: 8px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    }
+
+    .content {
+      padding: 42px 32px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(1.9rem, 3vw, 2.8rem);
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.24);
+      background: rgba(56, 189, 248, 0.15);
+      color: #bae6fd;
+      font-size: 0.9rem;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.2vw, 1.15rem);
+      line-height: 1.8;
+    }
+
+    .contacts {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .chip {
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(15, 23, 42, 0.45);
+      color: #f8fafc;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .chip:hover {
+      border-color: rgba(56, 189, 248, 0.75);
+      transform: translateY(-1px);
+      transition: .2s ease;
+    }
+  </style>
+</head>
+<body>
+  <main class="panel">
+    <div class="top"></div>
+    <section class="content">
+      <div class="badge">系统公告</div>
+      <h1>您访问的服务暂时不可用，正在维护</h1>
+      <p>我们正在进行系统升级与优化，将尽快恢复服务。<br/>如有紧急需求，请联系以下邮箱：</p>
+      <div class="contacts">
+        <a class="chip" href="mailto:michaelwanghaoyu@hotmail.com">michaelwanghaoyu@hotmail.com</a>
+        <a class="chip" href="mailto:3166487706@qq.com">3166487706@qq.com</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
